@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Estoque de produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let product of stock">
+      <ion-label>{{product.name}}</ion-label>
+      <ion-label>{{product.quantity}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addProduct()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
